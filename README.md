@@ -35,12 +35,14 @@ The YOLOv9 model is used for surgical tool detection in leg suturing surgery wit
 - 2: Needle_driver (Blue Color of the boxes)
 
 
-📊 Notebooks
+📊 **Notebooks**
+
 `comparing_models.ipynb` — Compare loss and mAp of different models.
 
 `EDA_training_models.ipynb` — Analyzing the dataset, training the models, pipeline for custom augmentation and pooling videos from ID and OOD videos. 
 
-⚙️ YOLO Config Files
+⚙️ **YOLO Config Files**
+
 surgical.yaml: Training configuration for surgical tool dataset.
 
 pseudo.yaml, pseudo_ood.yaml: Datasets for semi-supervised training and OOD validation.
