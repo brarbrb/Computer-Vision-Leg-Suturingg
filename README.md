@@ -10,13 +10,10 @@ This repository provides a pipeline for training and evaluating YOLO models to d
 
 ├── EDA_training_models.ipynb # Exploratory Data Analysis and training steps
 
-├── custom_aug.yaml # Custom data augmentation configuration for yolov9
-
-├── pseudo.yaml # Pseudo-labeling dataset config for yolov9 (on in distribution videos)
-
-├── pseudo_ood.yaml # Pseudo-labeling for out-of-distribution data
-
 ├── surgical.yaml # Main training configuration for surgical dataset for base model with no modifications
+
+├── copied_data.yaml # Configuration for Yolo models using original data + data with custom augmentation, pooled frames from in-distribution and out of distribution videos
+
 
 
 ## 🛠️ Requirements
@@ -77,9 +74,7 @@ So we need to define configuration files that specify the paths to the dataset:
 
 `surgical.yaml`: Defines training/validation data paths and class labels for YOLOv9 models
 
-`pseudo.yaml`, `pseudo_ood.yaml`: Defines data path for semi-supervised training (first for In Distribution videos and in the next step for out of distribution video)
-
-`custom_aug.yaml`: Custom augmentation strategies create new files, so we needed to change the configurations 
+`copied_data.yaml`: Defines data path for semi-supervised training (first for In Distribution videos and in the next step for out of distribution video)
 
 *Note*: In distribution means videos from the same settings (surgery, video, room etc) as the training dataset was from out of distribution (videos that have slightly different settings) 
 
