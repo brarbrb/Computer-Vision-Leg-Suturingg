@@ -27,27 +27,37 @@ pip install -r requirements.txt
 ```
 
 Models
-The YOLOv8 model is used for surgical tool detection with the following classes:
-- 0: Empty
+The YOLOv9 model is used for surgical tool detection in leg suturing surgery with the following classes:
+- 0: Empty (Red Color of the boxes)
 
-- 1: Tweezers
+- 1: Tweezers (Green Color of the boxes)
 
-- 2: Needle_driver
+- 2: Needle_driver (Blue Color of the boxes)
 
-##🎥 Run Inference on Videos
+
+📊 Notebooks
+`comparing_models.ipynb` — Compare loss and mAp of different models.
+
+`EDA_training_models.ipynb` — Analyzing the dataset, training the models, pipeline for custom augmentation and pooling videos from ID and OOD videos. 
+
+⚙️ YOLO Config Files
+surgical.yaml: Training configuration for surgical tool dataset.
+
+pseudo.yaml, pseudo_ood.yaml: Datasets for semi-supervised training and OOD validation.
+
+custom_aug.yaml: Custom augmentation strategies used during training.
+
+
+## 🎥 Run Inference on Videos
 ```bash 
 python video.py path/to/input.mp4 path/to/output.mp4 --model path/to/your_model.pt
 ```
-Default model path: runs/detect/base_model2/weights/best.pt
+Default model path: `runs/detect/base_model2/weights/best.pt`
 
 
 ## 🖼️ Run Inference on Images
 ```bash
 python predict.py path/to/input.jpg path/to/output.jpg --model path/to/your_model.pt
 ```
-Default model path: trained_models/base_model2.pt
+Default model path: `trained_models/base_model2.pt`
 
-📊 Notebooks
-comparing_models.ipynb — Compare loss and mAp of different models.
-
-EDA_training_models.ipynb — Analyzing the dataset, training the model, Pipeline for 
