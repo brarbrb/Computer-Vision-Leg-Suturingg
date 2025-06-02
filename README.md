@@ -50,12 +50,13 @@ The YOLOv9 model is used for surgical tool detection in leg suturing surgery wit
 
 ⚙️ **YOLO Config Files**
 
-surgical.yaml: Training configuration for surgical tool dataset.
+`surgical.yaml`: Training configuration for base YOLOv9 model
 
-pseudo.yaml, pseudo_ood.yaml: Datasets for semi-supervised training and OOD validation.
+`pseudo.yaml`, `pseudo_ood.yaml`: Datasets for semi-supervised training (first for In Distribution videos and in the next step for out of distribution video)
 
-custom_aug.yaml: Custom augmentation strategies used during training.
+`custom_aug.yaml`: Custom augmentation strategies created new files, so we needed to change the configurations 
 
+*Note*: In distribution means videos from the same settings (surgery, video, room etc) as the training dataset was from out of distribution (videos that have slightly different settings) 
 
 ## 🎥 Run Inference on Videos
 ```bash 
@@ -70,3 +71,4 @@ python predict.py path/to/input.jpg path/to/output.jpg --model path/to/your_mode
 ```
 Default model path: `trained_models/base_model2.pt`
 
+## Files and Directories that created from running the `EDA_training_models.ipynb`
