@@ -3,12 +3,19 @@ This repository provides a pipeline for training and evaluating YOLO models to d
 
 ## 📁 Project Structure
 ├── video.py # Predicts bounding boxes on a video and saves the annotated output
+
 ├── predict.py # Predicts bounding boxes on a single image and visualizes the output
+
 ├── comparing_models.ipynb # Notebook comparing performance of different models
+
 ├── EDA_training_models.ipynb # Exploratory Data Analysis and training steps
+
 ├── custom_aug.yaml # Custom data augmentation configuration for yolov9
+
 ├── pseudo.yaml # Pseudo-labeling dataset config for yolov9 (on in distribution videos)
+
 ├── pseudo_ood.yaml # Pseudo-labeling for out-of-distribution data
+
 ├── surgical.yaml # Main training configuration for surgical dataset for base model with no modifications
 
 
