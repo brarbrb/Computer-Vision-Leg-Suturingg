@@ -14,7 +14,8 @@ This repository provides a pipeline for training and evaluating YOLO models to d
 
 ├── copied_data.yaml # Configuration for Yolo models using original data + data with custom augmentation, pooled frames from in-distribution and out of distribution videos
 
-
+## Model weights
+[Download final model weights here](https://github.com/brarbrb/Computer-Vision-Leg-Suturingg/releases/download/v1/fine_tuned_pseudo_ood.pt)
 
 ## 🛠️ Requirements
 
